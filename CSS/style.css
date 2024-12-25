@@ -1,0 +1,56 @@
+.container{
+    display:flex;
+}
+.left{
+    flex:1;
+    background-color:blanchedalmond;
+}
+.right{
+    flex:3;
+    background-color:lightcoral;
+}
+.ar{
+    position:relative;
+    height:200px;
+    width:100%;
+    opacity:0;
+    animation: img 6s linear infinite;
+    align-items:center;
+}
+#image1{
+    animation-delay:2s;
+    width:100px;
+    height:100px;
+}
+#image2{
+    animation-delay:4s;
+    width:100px;
+    height:100px;
+}
+
+@keyframes img{
+    0%{
+        opacity:0;
+    }
+    0.01%,33.32%{
+opacity:1;
+    }
+    33.32%{
+        opacity:0;
+    }
+}
+body{
+    background-color:pink;
+}
+.heading{
+    background-color: blueviolet;
+    text-align:center
+}
+.i{
+    align-items:center;
+    position: relative;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}

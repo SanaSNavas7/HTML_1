@@ -1,0 +1,90 @@
+<html>
+  <head><marquee behaviour="scroll"  onmouseover="stop()" onmouseout="start()">WELCOME TO FRESHERS WORLD !!!</marquee>
+    
+  </head>
+  <body>
+    <table border="2">
+      <tr>
+        <td colspan="2">Registration Form</td>
+      </tr>
+      <tr>
+        <td><label>Name: </label></td>
+        <td><input type="text" name="Name" /></td>
+      </tr>
+      <tr>
+        <td><label>Age: </label></td>
+        <td>
+          <select name="Age" id="age">
+            <option value="18-20">18-20</option>
+            <option value="20-50">20-50</option>
+            <option value="50 and above">50 and above</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><label>Password: </label></td>
+        <td><input type="password" name="password" /></td>
+      </tr>
+      <tr>
+        <td><label>Re-enter Password: </label></td>
+        <td><input type="password" name="password" /></td>
+      </tr>
+      <tr>
+        <td><label>Security Question: </label></td>
+        <td>
+          <input type="radio" name="qn" value="option1" />What is your pet name
+          ?<br />
+          <input type="radio" name="qn" value="option2" />What is your best
+          friends name ?<br />
+          <input type="radio" name="qn" value="option3" />What is your favourite
+          color ?<br />
+          <input type="radio" name="qn" value="option4" />Who is your favourite
+          teacher ?
+        </td>
+      </tr>
+      <tr>
+        <td><label>Answer of the security question</label></td>
+        <td><input type="text" name="answer" /></td>
+      </tr>
+      <tr>
+        <td><label>Email Id: </label></td>
+        <td><input type="mail" id="mail" /></td>
+      </tr>
+      <tr>
+        <td><label>Languages Known: </label></td>
+        <td>
+          <input
+            type="checkbox"
+            name="Malayalam"
+            value="option1"
+          />Malayalam<br />
+          <input type="checkbox" name="English" value="option2" />English<br />
+          <input type="checkbox" name="Hindi" value="option3" />Hindi
+        </td>
+      </tr>
+      <tr>
+        <td><label>Phone No: </label></td>
+        <td>
+          <table border="2">
+            <tr>
+              <th>Home</th>
+              <th>Office</th>
+            </tr>
+            <tr>
+              <td><input type="number" name="phoneno" /></td>
+              <td><input type="number" name="phoneno" /></td>
+            </tr></table>
+            <tr><td><label>File choosen: </label></td>
+              <td><input type="file" /></td>
+            </tr>
+            <tr>
+                <td ><input type="button" value="submit" /></td>
+                <td><input type="button" value="reset" /></td>
+              
+            </tr>
+          
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
