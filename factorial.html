@@ -1,0 +1,29 @@
+<html>
+    <head>FACTORIAL</head>
+    <body>
+        <form action="" method="POST">
+            <input type="text" name="num" placeholder="Enter the number">
+            <input type="submit" name="submit" value="submit">
+        </form>
+        <?php
+        if(isset($_POST['submit'])){
+            $n=$_POST['num'];
+
+        
+        function factorial($x){
+            if($x==0){
+                return 1;
+            }
+            
+                return $x * factorial($x-1);
+            }
+            echo "<br>";
+            echo "Factorial of $n is".factorial($n);
+        
+        }
+        
+        
+        ?>
+
+    </body>
+</html>

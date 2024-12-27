@@ -1,0 +1,22 @@
+<html>
+    <head><h3 align="center">CHANGE BACKGROUND COLOR ACCORDING TO BUTTON CLICK</h3></head>
+    <body>
+        <center><button>Change</button></center>
+        <script>
+            function randomColor(){
+                hex='1234567890ABCDEF';
+            let color='#';
+            for(i=0;i<6;i++){
+                color+=hex[Math.floor(Math.random() * 16)];
+
+            }
+            return color;
+            }
+            document.querySelector('button').addEventListener('click',()=>
+        {
+            document.querySelector('body').style.backgroundColor=randomColor()
+        });
+          
+        </script>
+    </body>
+</html>
