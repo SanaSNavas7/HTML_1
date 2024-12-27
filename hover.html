@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="first">
+      <center><img src="helo.jpg" height="300px" width="600px" /></center>
+    </div>
+    <div class="second">
+      <center><img src="world.jpg" height="300px" width="600px" /></center>
+    </div>
+    <script>
+      document.querySelector(".first img").addEventListener("mouseover", () => {
+        document.querySelector(".first").classList.add("hidden");
+        document.querySelector(".second").classList.remove("hidden");
+      });
+      document
+        .querySelector(".second img")
+        .addEventListener("mouseover", () => {
+          document.querySelector(".second").classList.add("hidden");
+          document.querySelector(".first").classList.remove("hidden");
+        });
+    </script>
+  </body>
+</html>

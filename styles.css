@@ -1,0 +1,19 @@
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #3282B8;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #1B262C;
+}
+
+#string, #math {
+    display: none;
+    margin-top: 20px;
+}

@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css"></script>
+  </head>
+  <body>
+    <button onClick="showstring()">String Functions</button>
+    <button onClick="showmath()">Math Functions</button>
+    <div id="string">
+      <h2>String Functions</h2>
+      <ul>
+        <li>
+          <b>charAt(index)</b> - Returns the character at the specified index.
+        </li>
+        <li><b>concat()</b> - Combines strings.</li>
+        <li><b>indexOf()</b> - Finds the position of a substring.</li>
+        <li>
+          <b>toUpperCase()/toLowerCase()</b> - Converts to uppercase/lowercase.
+        </li>
+        <li><b>split()</b> - Splits a string into an array.</li>
+      </ul>
+    </div>
+    <div id="math">
+      <h2>Math Functions</h2>
+      <ul>
+        <li><b>abs()</b> - Returns the absolute value.</li>
+        <li><b>ceil()/floor()</b> - Rounds up/down to the nearest integer.</li>
+        <li><b>max()/min()</b> - Returns the max/min of a set of numbers.</li>
+        <li><b>random()</b> - Generates a random number.</li>
+        <li><b>sqrt()</b> - Returns the square root of a number.</li>
+      </ul>
+    </div>
+    <script>
+        function showstring(){
+            document.getElementById('string').style.display='block';
+            document.getElementById('math').style.display='none';
+        }
+        function showmath(){
+            document.getElementById('math').style.display='block';
+            document.getElementById('string').style.display='none';
+        }
+    </script>
+  </body>
+</html>
