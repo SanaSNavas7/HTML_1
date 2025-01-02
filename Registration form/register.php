@@ -1,42 +1,54 @@
 <html>
-    <head>Registration form</head>
+    <head>
+       <center> Registration Form</center>
+    </head>
     <body>
-        <form action="desk.php" method="post">
-            Name: <input type="text" name="name">required<br>
-            E-mail: <input type="email" name="email">required<br>
-            Password: <input type="password" name="password">required<br>
-            Re-enter Password: <input type="password" name="repassword">required<br>
-            <input type="submit" value="submit">
-        </form>
-        <?php
-        $conn=mysqli_connect('localhost','root','','test');
-        if(!$conn){
-            die("connnection failed".mysqli_conn_error());
+        <center>
+            <form action="" method="POST">
+                <table border="1">
+                    <tr>
+                        <td>
+                            Name:<input type="text" name="name">required<br>
+                        </td></tr>
+                        <tr><td>
+                            Email:<input type="email" name="email">required<br>
+                        </td></tr>
+                        <tr><td>
+                            Password:<input type="password" name="password">required<br>
+                        </td></tr>
 
-        }
-        else{
-            if(isset($_POST))
-            {
+                    </tr>
+                    <tr><td><input type="submit" name="register" value="register"></td></tr>
+                    <tr><td>Already registered ? <a href="login.php">Login</a></td></tr>
+                </table>
+
+
+            </form>
+            <?php
+            if(isset($_POST['register'])){
                 $name=$_POST['name'];
-                $password=$_POST['password'];
                 $email=$_POST['email'];
-                $repassword=$_POST['repassword'];
-                
-            
-        if($password===$repassword){
-            
-            $query="insert into sample(name,email,password) values('$name','$email','$password')";
+                $password=$_POST['password'];
+                $conn=mysqli_connect('localhost','root','','db1');
+                if(!$conn){
+                    die("connection failed". mysqli_connect_error());
 
-        }
-        if (mysqli_query($conn, $query)){
-            echo "Registered successfully";
-        }
-        else{
-            echo "error ".mysqli_error($conn);
-        }
-            
-        }}
-        mysqli_close($conn);
-        ?>
+                }
+                else{
+                    $q="insert into table1(name,email,password) values('$name','$email','$password')";
+                    $query=mysqli_query($conn,$q);
+                    if($query){
+                        echo "Registered successfully";
+                    }
+                    else{
+                        echo "Cant register";
+                    }
+                    mysqli_close($conn);
+
+                }
+            }
+            ?>
+        </center>
+        
     </body>
 </html>
